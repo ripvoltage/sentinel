@@ -1,0 +1,21 @@
+[package]
+name = "sentinel-ebpf"
+version = "0.1.0"
+edition = "2021"
+description = "eBPF kernel probes and LSM hooks for behavioral ransomware detection"
+
+[dependencies]
+aya-ebpf      = "0.2"
+aya-log-ebpf  = "0.2"
+ebpf-common   = { path = "../ebpf-common", package = "sentinel-common" }
+
+[[bin]]
+name = "sentinel-ebpf"
+path = "src/main.rs"
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+strip = "none"
+codegen-units = 1
