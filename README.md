@@ -1,4 +1,4 @@
-# Sentinel Anti-Ransomware Daemon 🛡️
+# Sentinel Anti-Ransomware
 
 Sentinel es un sistema de prevención y detección conductual de ransomware de alto rendimiento para GNU/Linux. En lugar de utilizar bases de firmas de virus conocidos, Sentinel analiza el **comportamiento** de los procesos en tiempo real, neutralizando instantáneamente cualquier amenaza antes de que pueda secuestrar el disco.
 
