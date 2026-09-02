@@ -1,0 +1,10 @@
+[package]
+name = "sentinel-common"
+version = "0.1.0"
+edition = "2021"
+description = "Shared no_std types (C-ABI) between eBPF kernel probes and userspace daemon"
+
+[features]
+default = []
+# Enable std-dependent trait impls (Send, Sync) for userspace consumption
+user = []
