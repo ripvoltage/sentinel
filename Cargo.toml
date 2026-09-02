@@ -1,0 +1,12 @@
+[workspace]
+name = "sentinel"
+members = [
+    "ebpf-common",
+    "daemon",
+]
+# ebpf-programs targets bpfel-unknown-none and must be built from inside its directory:
+#   cd ebpf-programs && cargo +nightly build -Z build-std=core --target bpfel-unknown-none --release
+exclude = [
+    "ebpf-programs",
+]
+resolver = "2"
