@@ -43,3 +43,14 @@ Para ver a detalle dependencias necesarias y posibles problemas al compilar, vis
 
 ## Licencia
 Licencia MIT
+
+## ETC
+Uso de memoria:
+<img width="1064" height="191" alt="Captura desde 2026-09-02 01-17-50" src="https://github.com/user-attachments/assets/32400c72-b0a6-46f4-8d09-0baf1b5755ac" />
+5824 kB en Physical RAM
+
+Ejecución de Sentinel
+<img width="1494" height="532" alt="Captura desde 2026-09-02 01-18-55" src="https://github.com/user-attachments/assets/186d09c5-702a-4ef2-bdda-c50e12dad8c4" />
+
+Ejecución de Sentinel + Ransomware TEST inicializado (y luego neutralizado)
+<img width="1920" height="1080" alt="Captura desde 2026-09-02 01-19-45" src="https://github.com/user-attachments/assets/d506d0f4-1568-4e6c-943f-f69090a0c244" />
