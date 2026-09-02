@@ -38,5 +38,8 @@ Inicia el demonio en segundo plano con privilegios de administrador para comenza
 ## Arquitectura
 Sentinel está construido puramente en Rust (utilizando el framework Aya). Para un análisis profundo de la ingeniería, los desafíos del verificador eBPF y las decisiones arquitectónicas, por favor lee el documento [Arquitectura y Diseño](ARCHITECTURE.md) incluido en este repositorio.
 
+## Dependencias
+Para ver a detalle dependencias necesarias y posibles problemas al compilar, visite: [Dependencias](DEPENDENCIES.md)
+
 ## Licencia
 Licencia MIT
