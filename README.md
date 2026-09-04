@@ -72,7 +72,7 @@ Inicia el demonio en segundo plano (requiere permisos de root):
 ## Arquitectura y Dependencias
 
 Para leer sobre cómo evadimos los estrictos límites del Verificador del Kernel mediante matemáticas *branchless*, consulta los documentos:
-- [Arquitectura y Diseño (Tesis)](ARCHITECTURE.md)
+- [Arquitectura y Diseño](ARCHITECTURE.md)
 - [Dependencias y Solución de Problemas](DEPENDENCIES.md)
 
 ## Imágenes
