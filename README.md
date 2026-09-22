@@ -350,5 +350,4 @@ When executed, `canary_tester` writes encrypted payloads into the decoy files un
 
 ## License
 
-This project is licensed under the MIT License.
-The eBPF kernel program is dual-licensed under GPL-2.0.
+This project is licensed under the GPL-2.0.
