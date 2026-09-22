@@ -75,6 +75,29 @@ bpf:
 		echo "Clang not available on this system. Skipping eBPF bytecode compilation."; \
 	fi
 
+VERSION ?= 0.1.0
+ARCH ?= $(shell uname -m)
+RELEASE_NAME = sentinel-v$(VERSION)-linux-$(ARCH)
+RELEASE_DIR = release/$(RELEASE_NAME)
+
+release: all test
+	rm -rf release
+	mkdir -p $(RELEASE_DIR)/bin
+	mkdir -p $(RELEASE_DIR)/systemd
+	cp $(TARGET) $(RELEASE_DIR)/bin/
+	cp $(TESTER_TARGET) $(RELEASE_DIR)/bin/
+	strip --strip-all $(RELEASE_DIR)/bin/sentinel
+	strip --strip-all $(RELEASE_DIR)/bin/canary_tester
+	cp README.md $(RELEASE_DIR)/
+	cp packaging/install.sh $(RELEASE_DIR)/
+	cp packaging/uninstall.sh $(RELEASE_DIR)/
+	chmod +x $(RELEASE_DIR)/install.sh $(RELEASE_DIR)/uninstall.sh
+	cp systemd/sentinel.service $(RELEASE_DIR)/systemd/
+	tar -czf release/$(RELEASE_NAME).tar.gz -C release $(RELEASE_NAME)
+	cd release && sha256sum $(RELEASE_NAME).tar.gz > $(RELEASE_NAME).tar.gz.sha256
+	@echo "Release bundle created: release/$(RELEASE_NAME).tar.gz"
+	@echo "Checksum created: release/$(RELEASE_NAME).tar.gz.sha256"
+
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
@@ -82,7 +105,7 @@ $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
 clean:
-	rm -rf $(BUILD_DIR) $(BIN_DIR)
+	rm -rf $(BUILD_DIR) $(BIN_DIR) release
 
 install: $(TARGET)
 	install -d /usr/local/bin
