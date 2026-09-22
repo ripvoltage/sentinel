@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/32532438/README.md)
 # Sentinel Anti-Ransomware
 
 ```
