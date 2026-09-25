@@ -1,0 +1,15 @@
+[Unit]
+Description=Sentinel Anti-Ransomware Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/sentinel
+Restart=always
+RestartSec=5
+KillMode=process
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
